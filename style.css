@@ -1,0 +1,195 @@
+
+main{
+    background-color: lavender;
+}
+.fs-1{
+    font-weight: 700; 
+}
+.myside{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20vh; 
+    width: 180px; 
+    height: 100vh;
+    z-index: 100;
+    border-right: lavender 3px solid;
+    background-color: white;
+    
+    font-family: Arial, sans-serif;
+}
+.myrow{
+    margin-inline: 10%;
+    width: 80%; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    p{
+        font-weight: 600;
+        text-align: center;
+        font-size: large;  
+    }
+
+}
+.mycol{
+    grid-area: "c";
+}
+.centrar{
+    background-color: lavender;
+    display: grid;
+    padding: 20px;
+    padding-inline: 40%;
+    align-items: center;
+}
+@media( width < 700px) { 
+    .centrar{
+        padding: 30%;
+    }
+}
+.alertgpt{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50px;
+}
+.card{
+    transition: transform 1s, background-Color 1s, border .5s, height 1s;
+    height: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+}
+p.card-text{
+    transform: none;
+    text-align: start;
+}
+.card-img-top{
+    transition: transform .2s;
+}
+
+.tipopoke1{
+    width: 100px;
+    max-width: 100px;
+    height: 32px;
+}
+.tipopoke2{
+    width: 100px;
+    max-width: 100px;
+    height: 32px;
+    
+}
+h2{
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    padding: 20px;
+    margin: 10px;
+    margin-inline: 0;
+}
+.selector{
+    width: 350px;
+    padding: 20px;
+
+}
+.calculadora{
+    background-color: #fff;
+}
+h4{
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+/* #select1:hover > :not(:hover) {
+    filter: grayscale(1);
+} */
+.selecttipo{
+    margin: 5px;
+    cursor: pointer;
+}
+.selecttipo:hover{
+    transform: scale(1.1);
+}
+.results{
+    padding: 50px;
+    background-color: lavender;
+    height: 0px;
+    transition: height 2s;
+    overflow: hidden;
+}
+.card-img-top{
+    transition: transform .5s;
+}
+.bgrell{
+    background-color: lavender;
+    height: 100px;
+}
+.posx{
+    text-align: end;
+    font-size: 30px;
+    padding: 10px;
+    padding-bottom: 0;
+    cursor: pointer;
+    color: red;
+}
+.bg-lav{
+    background-color: lavender;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    padding: 5  0px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.acomodoimg{
+    width: 100%;
+    background-size: cover;
+    image-rendering: pixelated;
+
+}
+.card-title{
+    font-weight: 800;
+    
+    font-size: xx-large;
+    font-family: 'VT323', monospace;
+
+}
+.imgcuadradapoke{
+    width: 75px;
+    height: 75px;
+}
+
+.imageany{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-image: url(img/fondo.svg);
+}
+.formulario{
+    width: 30vw;
+    /* height: 75vh; */
+}
+.centbtn{
+    margin-inline: 25%;
+    width: 50%;
+}
+label{
+    text-overflow: clip;;
+}
+.cuenta{
+    font-size: 20px;
+    font-weight: 500;  
+    border-radius: 20px;
+    cursor: pointer;
+}

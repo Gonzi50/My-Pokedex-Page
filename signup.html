@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="bootstrap_min/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap_min/icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div  class="imageany d-flex justify-content-center" alt="">
+        <div class="p-3 bg-light text-dark formulario  align-self-center border rounded">
+          <button type="button" class="btn-close" aria-label="Close" onclick="window.location.replace('index.html')"></button>
+            <h2>Creación de cuenta</h2>
+            <div class="form-floating mx-5 my-2"> 
+              <input type="text" class="form-control" id="floatingfullname" onfocus="this.classList.remove('is-invalid');" placeholder="name@example.com">
+              <label for="floatingfullname"> Nombre Completo</label>
+            </div>
+            <div class="form-floating mx-5 my-2"> 
+                <input type="text" class="form-control" id="floatingname" onfocus="this.classList.remove('is-invalid');" placeholder="name@example.com">
+                <label for="floatingname"> Nombre de usuario</label>
+              </div>
+            <div class="form-floating mx-5 my-3"> 
+                <input type="email" class="form-control" id="floatingInput" onfocus="this.classList.remove('is-invalid');" placeholder="name@example.com">
+                <label for="floatingInput"> Correo Electrónico</label>
+              </div>
+              <div class="form-floating mx-5 mt-4  mb-3 ">
+                <input type="password" class="form-control" id="floatingPassword" onfocus="this.classList.remove('is-invalid');" placeholder=" Password">
+                <label for="floatingPassword"> Contraseña</label>
+              </div>
+              <div class="form-floating mx-5 mt-3 ">
+                <input type="password" class="form-control" id="floatingPassword2" onfocus="this.classList.remove('is-invalid');" placeholder="Password">
+                <label for="floatingPassword2">Repetir Contraseña</label>
+              </div>
+              <button type="button" class="btn btn-primary btn-lg centbtn my-3" onclick="crearcuenta()">Crear Cuenta</button>
+              <p class="text-center text-danger" id="alertaini"> </p>
+              <div class=" w-100 m-0 p-2 rounded d-flex justify-content-around"> 
+                <span id="msginfisq"> ¿Ya tienes una cuenta?</span> 
+                <a id="btcrear" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover " href="login.html">
+                    <span class="">Iniciar Sesión</span>    
+                    <i class="bi bi-person-circle"></i>
+                  </a>
+              </div>
+              
+
+        </div>
+
+        
+    </div>
+
+
+    <script src="bootstrap_min/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
