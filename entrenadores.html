@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="cargaentre(); vercuenta()">
+      
+    <div class="tapar justify-content-center"  onclick="this.style.display = 'none'; $('.centrargcard').outerHTML = ''"></div>
       <div class="container">
         <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-3 mb-2 mb-md-0">
@@ -27,12 +29,14 @@
           </div>
         </header>
       </div>
-      <div class="row" style="width: 100%; box-sizing: border-box; " id="entrenadores">
-        
-        
+
+      <main class="ent">
+
+      
+      <div class="row py-4" style="width: 100%; box-sizing: border-box; " id="entrenadores">
         
       </div>
-      
+    </main>
       
 
 
@@ -44,7 +48,7 @@
           <li class="nav-item"><a href="tabla.html" class="nav-link px-2 text-body-secondary">Tabla de tipos</a></li>
           <li class="nav-item"><a href="entrenadores.html" class="nav-link px-2 text-body-secondary">Entrenadores</a></li>
         </ul>
-        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        <p class="text-center text-body-secondary">© 2024 False Company, SA</p>
       </footer>
 
       <!-- Toast -->

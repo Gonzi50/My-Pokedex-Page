@@ -195,7 +195,7 @@ const pokestipos = [
 ["Slowpoke", 17, 14], ["Slowbro", 17, 14], ["Magnemite", 18, 16], ["Magneton", 18, 16], ["Farfetch'd", 8, 6], ["Doduo", 13, 8],
 ["Dodrio", 13, 8], ["Seel", 17, 0], ["Dewgong", 17, 12], ["Grimer", 4, 0], ["Muk", 4, 0], ["Shellder", 17, 0],
 ["Cloyster", 17, 12], ["Gastly", 9, 4], ["Haunter", 9, 4], ["Gengar", 9, 4], ["Onix", 11, 15], ["Drowzee", 14, 0],
-["Hypno", 14, 0], ["Krabby", 17, 0], ["Kingler", 17, 0], ["Voltorb", 4, 0], ["Electrode", 4, 0], ["Exeggcute", 10, 14],
+["Hypno", 14, 0], ["Krabby", 17, 0], ["Kingler", 17, 0], ["Voltorb", 18, 0], ["Electrode", 18, 0], ["Exeggcute", 10, 14],
 ["Exeggutor", 10, 14], ["Cubone", 11, 0], ["Marowak", 11, 0], ["Hitmonlee", 6, 0], ["Hitmonchan", 6, 0], ["Lickitung", 13, 0],
 ["Koffing", 4, 0], ["Weezing", 4, 0], ["Rhyhorn", 11, 15], ["Rhydon", 11, 15], ["Chansey", 13, 0], ["Tangela", 10, 0],
 ["Kangaskhan", 13, 0], ["Horsea", 17, 0], ["Seadra", 17, 0], ["Goldeen", 17, 0], ["Seaking", 17, 0], ["Staryu", 17, 0],
@@ -651,13 +651,13 @@ function cargaentre(){
 
 
     for (let j = 0; j < pokeslideres[i][1].length; j++) {
-      pokes1+=`<a class="d-inline-flex focus-ring p-3 m-2 py-1 px-2 text-decoration-none border rounded-2" style="min-width: 250px;"  >  
+      pokes1+=`<a class="d-inline-flex focus-ring p-3 m-2 py-1 px-2 text-decoration-none border rounded-2 saltar" onclick="vercartaentre(this)" style="min-width: 250px;"  >  
         ${imgs1[j]}
         <div class=" w-100 p-4"> ${pokeslideres[i][1][j]}</div>
       </a>`;
     } 
     for (let j = 0; j < pokeslideres[i+1][1].length; j++) {
-      pokes2+=`<a class="d-inline-flex focus-ring p-3 m-2 py-1 px-2 text-decoration-none border rounded-2" style="min-width: 250px;" > 
+      pokes2+=`<a class="d-inline-flex focus-ring p-3 m-2 py-1 px-2 text-decoration-none border rounded-2 saltar" onclick="vercartaentre(this)" style="min-width: 250px;" > 
         ${imgs2[j]}
         <div class=" w-100 p-4"> ${pokeslideres[i+1][1][j]}</div>
       </a>`; 
@@ -813,4 +813,43 @@ function cerrarsesion(){
   toasttext.innerHTML= `La sesion sera cerrada y pasara automaticamente al inicio de sesión para iniciar con otra cuenta.<br>
   <button type="button" class="btn btn-danger btn-sm" onclick="localStorage.setItem('actual',''); window.location.replace('login.html')">Cerrar sesión</button> `;
   toastBootstrap.show()
+}
+
+function vercartaentre(el){
+  const tapar = $('.tapar');
+  tapar.style.display='flex';
+  
+  const npoke = el.innerHTML;
+  let nom = "" + el.textContent;
+  nom = nom.trim();
+  nom = nom.substring(0,nom.length-6);
+  let pospoke;
+  for (let i = 0; i < pokedex.length; i++) {
+    if(pokedex[i][0]==nom){
+      pospoke=i; 
+    }
+  }
+  let poket = [];
+  for (let i = 0; i < pokestipos.length; i++) {
+    if(pokestipos[i][0]==nom){
+       poket.push(tipos[pokestipos[i][1]])
+       poket.push(tipos[pokestipos[i][2]])
+    }
+  }
+
+  let nl =  pospoke<9 ? `00${pospoke+1}` : pospoke<99 ? `0${pospoke+1}` : `${pospoke+1}` ;  
+  tapar.outerHTML += 
+  // <a class="d-inline-flex focus-ring p-3 m-2 py-1 px-2 text-decoration-none border rounded-2 saltar" onclick="vercartaentre()" style="min-width: 250px;"
+  ` <div class="card p-4 centrargcard" onclick="rotar(this)" style="width: 18rem; z-index:1002"> 
+            <img src="fotos/${nl}.png" class="card-img-top" alt="..."> 
+            <div class="card-body">
+              <p class="card-text" style="font-size: large; font-weight: 600;"> ${nom} <br>          
+              </p> 
+                <input id="oculto" type="hidden" value="${pospoke+1}"> 
+                <div class="row">
+                  <div class="tipopoke1 col p-2" style="background-image: url(img/${poket[0]}.png);"></div>
+                  <div class="tipopoke2 col p-2" style="background-image: url(img/${poket[1]}.png);"></div> 
+                </div>
+            </div>
+            </div>`
 }

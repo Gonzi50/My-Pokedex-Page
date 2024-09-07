@@ -1,6 +1,16 @@
 
 main{
-    background-color: lavender;
+    background-size: 100vw;
+    
+}
+.ind{
+    background-image: url(img/fondopokes.svg);
+}
+.tab{
+    background-image: url(img/fondopokes2.svg);
+}
+.ent{
+    background-image: url(img/fondopokes3.svg);
 }
 .fs-1{
     font-weight: 700; 
@@ -36,7 +46,6 @@ main{
     grid-area: "c";
 }
 .centrar{
-    background-color: lavender;
     display: grid;
     padding: 20px;
     padding-inline: 40%;
@@ -118,7 +127,7 @@ h4{
 }
 .results{
     padding: 50px;
-    background-color: lavender;
+    
     height: 0px;
     transition: height 2s;
     overflow: hidden;
@@ -127,7 +136,7 @@ h4{
     transition: transform .5s;
 }
 .bgrell{
-    background-color: lavender;
+    
     height: 100px;
 }
 .posx{
@@ -139,7 +148,7 @@ h4{
     color: red;
 }
 .bg-lav{
-    background-color: lavender;
+    
     box-sizing: border-box;
     width: 100%;
     margin: 0;
@@ -192,4 +201,30 @@ label{
     font-weight: 500;  
     border-radius: 20px;
     cursor: pointer;
+}
+.tapar{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+}
+
+.saltar{
+    transition: transform .2s , box-shadow .4s;
+}
+.saltar:hover{
+    
+    box-shadow: 1px 1px 5px 5px #e2e2e2 ;
+}
+.saltar:hover:active{
+    transform: scale(.95);
+}
+.centrargcard{
+    position: fixed;
+    top: calc(50vh - 9rem);
+    left: calc(50vw - 9rem);
 }
