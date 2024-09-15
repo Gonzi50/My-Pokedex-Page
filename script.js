@@ -853,3 +853,8 @@ function vercartaentre(el){
             </div>
             </div>`
 }
+
+
+
+
+
