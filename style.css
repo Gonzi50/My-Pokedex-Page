@@ -433,3 +433,122 @@ span.pntgir::before{
     width: 70px; 
     height: 70px;
 }
+
+.cubprt{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* display: none; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 102;
+}
+.alertbtdr{
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 5px #00000080;
+    background-color: rgb(115, 0, 0);
+    padding: 20px;
+    padding-top: 40px;
+    color: rgb(224, 224, 40);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    
+}
+.btaldr{
+    margin-inline:25%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: yellow;
+    cursor: pointer; 
+    background-color: rgb(255, 0, 0);
+    margin-top: 50px; 
+}
+
+.alertbtvc{
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 5px #00000080;
+    background-color: rgb(0, 48, 115);
+    padding: 20px;
+    padding-top: 40px;
+    color: rgb(228, 255, 78);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    
+}
+.btalvc{
+    margin-inline:25%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: yellow;
+    cursor: pointer; 
+    background-color: rgb(0, 27, 65); 
+    margin-top: 50px; 
+}
+
+.alertbtsl{
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 5px #00000080;
+    background-color: rgb(49, 49, 49);
+    padding: 20px;
+    padding-top: 40px;
+    color: rgb(225, 225, 225);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    
+} 
+.btalsl{
+    margin-inline:25%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(225, 225, 225); 
+    cursor: pointer; 
+    background-color: rgb(0, 0, 0); 
+    margin-top: 50px; 
+}
+.alertbtmc{  
+    width: 30vw;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 5px #00000080;
+    background-color: rgb(217, 133, 64);
+    padding: 20px;
+    padding-top: 40px;
+    color: rgb(225, 225, 225);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+.btalmc{
+    margin-inline:25%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(225, 225, 225); 
+    cursor: pointer; 
+    background-color: rgb(74, 49, 3); 
+    margin-top: 50px; 
+}

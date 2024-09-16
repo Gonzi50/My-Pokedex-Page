@@ -294,6 +294,7 @@ let user = userpokes[0];
 
 const vdpoke = $('#vidauser') 
 
+let fpksel = false;
 function pksel(N){
   if(userpokes[N].achp == 0) return;
   user = userpokes[N];
@@ -303,7 +304,21 @@ function pksel(N){
     <span class="ms-5 ps-5">${lvl[N]}</span>`;
   vdpoke.innerHTML = `${user.achp}/${user.hp}`;
   actbarra(vvidamy, user.achp, user.hp);
-
+  cconsole.innerHTML = `¡Adelante ${user.name}! `;
+  if(fpksel){
+    setTimeout(() => {
+      ataqueriv();
+    },2000);
+    setTimeout(() => {
+      if(user.achp==0){endbat(user.name,user); return; } //El usuario fue debilitado
+      verui();
+      }, 4000);
+  }else{
+    setTimeout(() => {
+      verui();
+    }, 2000);
+  }
+  fpksel = true;
 }
 let rival = rivalpokes[0];
 function rivsel(N){
@@ -425,10 +440,9 @@ const pkselect = `<div class="d-flex justify-content-center" id="consol">
   const ui = `
       <div class="btact" onclick="verAtaques()" >Atacar</div>
       <div class="btact" onclick="verpokes()">Pokemons</div>
-      <div class="btact">Mochila</div>
-      <a href="index.html" style="text-decoration: none;">
-        <div class="btact">Salir</div>
-      </a>`;
+      <div class="btact" onclick="cubadm(3)">Mochila</div>
+      <div class="btact" onclick="cubadm(2)">Salir</div>
+      `;
   function verui(){
     cconsole.innerHTML = ui;
   }
@@ -557,18 +571,19 @@ function actbarra(htbarra, psact, psmax ){
 
 function endbat(per, perobj){
   cconsole.innerHTML = ` ${per} se ha debilitado <span class='pntgir'></span} `;
+ 
   if(perobj == user){
+    fpksel = false;
     for(let i=0;i<4;i++){
       if(userpokes[i].achp != 0){
         pksel(i);
-        verui();
+        // verui();
         return;
       }
     }
     cconsole.innerHTML = " No te quedan mas pokemons , has perdido la batalla ";
-    setTimeout(() => {
-      location.reload();  
-    },8000);
+    cubadm(0);
+      
   }
   if(perobj == rival){
     npkriv++;
@@ -580,9 +595,7 @@ function endbat(per, perobj){
       }
     }
     cconsole.innerHTML = " El rival se ha quedado sin pokemons , has ganado la batalla ";
-    setTimeout(() => {
-      location.reload();  
-    },8000);
+    cubadm(1);
   }
 
   
@@ -598,5 +611,40 @@ function actvida(obj, dif, act, end, total){
     }, 200);
   }else{
     obj.innerHTML = `${Math.floor(end)}/${total}`;
+  }
+}
+
+
+function cubadm(AC){
+  let cub = $('.cubprt');
+  cub.style.display = "flex";
+  switch(AC){
+    case 0:
+      cub.innerHTML = `<div class="alertbtdr">
+      <span style="font-size: 60px;">PERDISTE </span>  <br>
+      Todos tus pokemon han sido debilitados
+    <div class="btaldr" onclick="location.reload();" >Reiniciar</div>  `;
+    break;
+    case 1:
+      cub.innerHTML = `<div class="alertbtvc"> 
+      <span style="font-size: 60px;">GANASTE </span>  <br>
+      Todos los pokemon del rival han sido debilitados
+    <div class="btalvc" onclick="location.reload();" >Reiniciar</div> `;
+    break;
+    case 2:
+      cub.innerHTML = `<div class="alertbtsl"> 
+      ¿Estas Seguro de salir?<br>   
+       El combate se reiniciara  
+      
+    <div class="btalsl bg-danger" onclick="window.location.replace('index.html')" >Salir</div>    
+    <div class="btalsl" onclick="$('.cubprt').style.display = 'none'">Cancelar</div>
+    </div>`;
+    break;
+    case 3:
+      cub.innerHTML = `<div class="alertbtmc"> 
+      La mochila esta vacia    
+    <div class="btalmc" onclick="$('.cubprt').style.display = 'none'">Regresar</div>
+    </div>`;
+    break;
   }
 }
