@@ -552,3 +552,167 @@ span.pntgir::before{
     background-color: rgb(74, 49, 3); 
     margin-top: 50px; 
 }
+
+
+.drsh{
+    animation-name: aparecer2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition: filter 1s;
+    filter: drop-shadow(2px 2px 4px rgb(240,215,94));
+}
+.drshp{
+    animation-name: aparecer3;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition: filter 1s;
+    filter: drop-shadow(2px 2px 4px rgb(240,215,94));
+}
+.drshb{
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition: filter 1s;
+    filter: drop-shadow(2px 2px 4px rgb(94, 200, 240));
+}
+.drshn{
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transition: filter 1s;
+    filter: drop-shadow(2px 2px 4px rgb(240, 152, 94)); 
+}
+@keyframes aparecer{
+    0%{
+        transform: translateX(100%) scale(1.2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes aparecer2{
+    0%{
+        transform: translateX(-100%) scale(1.2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes aparecer3{
+    0%{
+        transform: translateY(100%) scale(1.2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}
+.dspsubtitle{
+    font-size: 40px; 
+    font-weight: 800;
+    color: #ffffffb3;
+    filter: drop-shadow(2px 2px 4px #ffffffb3);     
+    text-align: center;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.dsppp{
+    /* padding: 20px; */
+    font-size: 22px; 
+    font-weight: 800;
+    color: #ffffffb3;
+    filter: drop-shadow(1px 1px 2px #ffffffb3);     
+    text-align: start;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.dspbtt{
+    font-size: 22px; 
+    font-weight: 800;
+    color: #6c757d;
+    filter: drop-shadow(2px 2px 5px #ffffffb3); 
+    border: 8px solid #fff;
+    transition: border 1s ease-in-out;
+    animation:  girarborde 3s linear infinite, opacity 4s linear 1;
+}
+
+.drsh:hover{
+    filter: drop-shadow(2px 2px  20px rgb(240,215,94));
+}
+.drshb:hover{
+    filter: drop-shadow(2px 2px  20px rgb(94, 200, 240));
+}
+.drshn:hover{
+    filter: drop-shadow(2px 2px  20px rgb(240, 152, 94)); 
+}
+.drshp:hover{
+    filter: drop-shadow(2px 2px  20px rgb(240,215,94));
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.dsptitle{
+    font-size: 70px; 
+    font-weight: 800;
+    color: #f0d75e;
+    filter: drop-shadow(2px 2px 4px rgb(240,215,94)); 
+    animation-name: title;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+    text-wrap: nowrap;
+    text-align: center; 
+}
+
+@keyframes title {
+    0%{
+        opacity: 0;
+        font-size: 90px;
+        font-weight: 900;
+    }
+    100%{
+        opacity: 1;
+        font-size: 70px;
+        font-weight: 800;
+    }
+}
+
+@keyframes girarborde {
+    0% {
+      border-color: #f0d75e #f0d75e transparent transparent;
+    }
+    25% {
+      border-color: transparent #f0d75e #f0d75e transparent;
+    }
+    50% {
+      border-color: transparent transparent #f0d75e #f0d75e;
+    }
+    75% {
+      border-color: #f0d75e transparent transparent #f0d75e;
+    }
+    100% {
+      border-color: #f0d75e #f0d75e transparent transparent;
+    }
+  }
+
+  .icon{
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    border: #f0d75e solid 2px;
+  }

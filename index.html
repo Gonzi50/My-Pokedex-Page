@@ -4,77 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title> Pokemon </title>
+    <link rel="icon" type="image/" href="/img/pokabol.ico">
     <link rel="stylesheet" href="bootstrap_min/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap_min/icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="verm() ; toastBootstrap.show(); vercuenta()">
-      <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          
-          <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-          </div>
-    
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Pokemon</a></li>
-            <li><a href="tabla.html" class="nav-link px-2">Tabla de tipos</a></li>
-            <li><a href="entrenadores.html" class="nav-link px-2">Entrenadores</a></li> 
-            <li><a href="batalla.html" class="nav-link px-2">Simulador de Batalla</a></li> 
-          </ul>
-    
-          <div class="col-md-3 text-end" id="vercuenta">
-          </div>
-        </header>
-      </div>
-      <main class="ind">
-        <h1 class="p-5 text-light">PAGINA DE PRACTICA POKEMON</h1> 
-        <div class="myrow" >
-          
+<body class=" bg-black overflow-x-hidden">  
+    <div class="container text-bg-dark rounded-3 border border-light my-4">
+        <div class="container-fluid pt-5 d-flex justify-content-around align-items-center">
+            <div class="dsptitle"> LA GRAN PAGINA POKÉMON </div>
         </div>
-        </div>  
-        <div class="container-fluid  centrar"  id="liveToastBtn">
-          <button type="button" id="butmos" class="btn btn-lg btn-outline-success " onclick="verm()">Ver mas Pokemons</button>
+        <div class="container-fluid py-0 d-flex justify-content-around align-items-center">
+            <div class="dspsubtitle"> Un monton de contenido sobre Pokemon <br> a un simple click</div>
         </div>
-
-      </main>
-      
-
-      <!-- Toast -->
-      <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="liveToast" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
-          <div class="toast-header">
-            <i class="bi bi-exclamation-triangle-fill pe-2  "> </i>
-            <strong class="me-auto" id="tltoast">Advertencia</strong>
-            <small></small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body">
-            <div id="textctoast">
-              Todo el contenido referente a Pokemon ha sido generado por ChatGPT, es probable que tenga errores.
+        <div class="container-fluid d-flex  justify-content-between">
+            <div class="m-2 me-0  pt-5 w-50 ">
+                <div class="dspsubtitle">Pokedex integrada</div>
+                <p class="dsppp p-3"> 
+                    La pagina tiene una Pokedex completa desplegable que contiene los 151 pokemon originales.
+                    En ella se puede ver sus nombres, imagenes, tipos y descripcion de cada uno.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light dspbtt p-3" onclick="window.location.replace('main.html')"> VER LA POKEDEX</button>
+                </div>
             </div>
-          </div>
+            <img class="m-2 me-0 drshn" src="img/dragonite.png" alt=""> 
         </div>
-      </div>
-      
+
+        <div class="container-fluid d-flex  justify-content-between">
+            <img class="m-5 drsh" src="img/pidget.png" alt="">
+            <div class="m-2 me-0  pt-5 w-50 ">
+                <div class="dspsubtitle">TABLA DE TIPOS</div>
+                <p class="dsppp p-3"> 
+                    La pagina cuenta con un sistema automatico de calculadora de tipos, que permite calcular las fortalezas y debilidades de cualquier tipo o combinación de tipos en pokemon.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light dspbtt p-3" onclick="window.location.replace('tabla.html')"> VER LA CALCULADORA</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid d-flex  justify-content-between">
+            
+            <div class="m-2 me-0  pt-5 w-50 ">
+                <div class="dspsubtitle"> ENTRENADORES </div>
+                <p class="dsppp p-3"> 
+                    La pagina tambien cuenta con un listado de todos los lideres de gimnacio de las ediciones rojo fuego y verde hoja. Incluyendo su equipo y sus niveles.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light dspbtt p-3" onclick="window.location.replace('entrenadores.html')"> VER LOS ENTRENADORES</button>
+                </div>
+            </div>
+            <img class="m-5 drshb" src="img/blastoise.png" alt="">
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="m-2 me-0  pt-5 w-50 ">
+                <div class="dspsubtitle"> SIMULADOR DE BATALLA </div>
+                <p class="dsppp p-3"> 
+                    La pagina cuenta con un simulador de batalla funcional que permite jugar desde la WEB la segunda batalla entre el jugador y su rival de las ediciones rojo fuego y verde hoja.
+                </p> 
+            </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-center">
+            <img class="p-0 m-0 drshp" src="img/pikachu.png" alt="">
+        </div>
+        <div class="d-flex justify-content-center"> 
+            <button type="button" class="btn btn-light dspbtt p-3 mb-5" onclick="window.location.replace('batalla.html')"> IR AL COMBATE</button>
+        </div>
+            
+        
+    </div> 
 
 
 
 
-      
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pokemons</a></li>
-            <li class="nav-item"><a href="tabla.html" class="nav-link px-2 text-body-secondary">Tabla de tipos</a></li>
-            <li class="nav-item"><a href="entrenadores.html" class="nav-link px-2 text-body-secondary">Entrenadores</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2024 False Company, SA</p>
-        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="bootstrap_min/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>

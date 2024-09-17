@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="icon" type="image/" href="/img/pokabol.ico">
     <link rel="stylesheet" href="bootstrap_min/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap_min/icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
@@ -12,23 +13,25 @@
 <body onload="cargaentre(); vercuenta()">
       
     <div class="tapar justify-content-center"  onclick="this.style.display = 'none'; $('.centrargcard').outerHTML = ''"></div>
-      <div class="container">
-        <header class=" d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-          </div>
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2 ">Pokemon</a></li>
-            <li><a href="tabla.html" class="nav-link px-2 ">Tabla de tipos</a></li>
-            <li><a href="#" class="nav-link px-2 link-secondary">Entrenadores</a></li>
-          </ul>
-    
-          <div class="col-md-3 text-end" id="vercuenta">
-          </div>
-        </header>
-      </div>
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-0 border-bottom">
+        
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="img/pikachu2.png" class="icon" alt="">
+          </a>
+        </div>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="main.html" class="nav-link px-2 ">Pokemon</a></li>
+          <li><a href="tabla.html" class="nav-link px-2 ">Tabla de tipos</a></li>
+          <li><a href="entrenadores.html" class="nav-link px-2 link-secondary">Entrenadores</a></li> 
+          <li><a href="batalla.html" class="nav-link px-2">Simulador de Batalla</a></li> 
+        </ul>
+        <div class="col-md-3 text-end" id="vercuenta">
+        </div>
+      </header>
+    </div>  
 
       <main class="ent">
 
@@ -44,11 +47,11 @@
       
       <footer class="py-3 my-4 ">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Pokemons</a></li>
+          <li class="nav-item"><a href="main.html" class="nav-link px-2 text-body-secondary">Pokemons</a></li>
           <li class="nav-item"><a href="tabla.html" class="nav-link px-2 text-body-secondary">Tabla de tipos</a></li>
           <li class="nav-item"><a href="entrenadores.html" class="nav-link px-2 text-body-secondary">Entrenadores</a></li>
         </ul>
-        <p class="text-center text-body-secondary">© 2024 False Company, SA</p>
+        <p class="text-center text-body-secondary">© 2024 fake Pokemon Company, SA</p>
       </footer>
 
       <!-- Toast -->

@@ -751,7 +751,7 @@ function iniciosesion(){
     return;
   }
   localStorage.setItem("actual",nombre.value);
-  window.location.replace("index.html");
+  window.location.replace("main.html");
 }
 
 function crearcuenta(){

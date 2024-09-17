@@ -182,7 +182,7 @@ const efis = {
   function calcularstats(base,nivel){
     let n = 5 + 2;
     let IV = Math.round( Math.random() * 31 );
-    let EV = Math.round( Math.random() * 252 ); 
+    let EV = Math.round( Math.random() * 151 ); 
     let stat = 5 + ( (nivel / 100) * ((base * 2) + IV + EV/4));
     stat = Math.round(stat);
     return stat;
@@ -636,7 +636,7 @@ function cubadm(AC){
       ¿Estas Seguro de salir?<br>   
        El combate se reiniciara  
       
-    <div class="btalsl bg-danger" onclick="window.location.replace('index.html')" >Salir</div>    
+    <div class="btalsl bg-danger" onclick="window.location.replace('main.html')" >Salir</div>    
     <div class="btalsl" onclick="$('.cubprt').style.display = 'none'">Cancelar</div>
     </div>`;
     break;
